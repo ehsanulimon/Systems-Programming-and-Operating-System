@@ -11,10 +11,10 @@ int main()
 
 	cout<<"Enter array size: ";
 	cin>>n;
-	/*cout<<"\nEnter process sequence:"<<endl;
+	cout<<"\nEnter process sequence:"<<endl;
 	for(i=0;i<n;i++){
     cin>>p[i];
-	}*/
+	}
     cout<<"\nEnter Arrival Time: (AT)"<<endl;
 	for(i=0;i<n;i++){
     cin>>At[i];
@@ -55,12 +55,15 @@ int main()
 		wt[i]=tt[i]-bt[i];
 		avg_wt+=wt[i];
 	}
+
+
+
 	cout<<"Solution  "<<endl;
 	cout<<"Process\tAT\tBT\tCT\tTT\tWT" <<endl;
 	for(i=0;i<n;i++){
-	cout<<"p"<<i<<"\t"<<At[i]<<"\t"<<bt[i]<<"\t"<<ct[i]<<"\t"<<tt[i]<<"\t"<<wt[i]<<endl;
+	cout<<"p"<<p[i]<<"\t"<<At[i]<<"\t"<<bt[i]<<"\t"<<ct[i]<<"\t"<<tt[i]<<"\t"<<wt[i]<<endl;
 	}
-	cout<<"Average turnaround time ="<<avg_tt<<endl;
-	cout<<"Average waiting time ="<<avg_wt<<endl;
+	cout<<"Average turnaround time ="<<avg_tt/n<<endl;
+	cout<<"Average waiting time ="<<avg_wt/n<<endl;
     return 0;
 }

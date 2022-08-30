@@ -23,7 +23,7 @@ int main()
            cout<<"enter Burst Time : ";
     for(i=0;i<n;i++){
         cin>>bt[i];
-        rem_bt[i]=bt[i];
+        rem_bt[i]=bt[i]; //   P[i].remaining_time = P[i].burst_time;
     }
     cout<<"Enter Quantum time : ";
     cin>>qt;
@@ -36,7 +36,7 @@ int main()
 
             if(At[i]>At[j])// 1st index At > 2nd index At
             {
-                 temp = bt[i];
+           temp = bt[i];
             bt[i]=bt[j];
             bt[j]=temp;
 
@@ -91,9 +91,11 @@ for(i=0;i<n;i++){
     cout<<" p["<<p[i]<<"]\t\t"<<"at["<<At[i]<<"]\t\t"<<" bt["<<bt[i]<<"]\t\t"<<" tat["<<tat[i]<<"]\t\t"<<" wt["<<wt[i]<<"]\t\t"<<endl;
 
 }
+
 avg_tat=avg_tat/n;
 avg_wt =avg_wt/n;
 cout<<"avg. tt = "<<avg_tat<<" avg. wt = "<<avg_wt;
+
 
     return 0;
 }

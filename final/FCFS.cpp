@@ -60,8 +60,18 @@ int main()
 	for(i=0;i<n;i++){
 	cout<<"p"<<p[i]<<"\t"<<At[i]<<"\t"<<bt[i]<<"\t"<<ct[i]<<"\t"<<tt[i]<<"\t"<<wt[i]<<endl;
 	}
-	cout<<"Average turnaround time ="<<avg_tt<<endl;
-	cout<<"Average waiting time ="<<avg_wt<<endl;
+	cout<<"Total turnaround time ="<<avg_tt<<endl;
+	cout<<"Total waiting time ="<<avg_wt<<endl;
+    cout<<"Average turnaround time ="<<avg_tt/n<<endl;
+	cout<<"Average waiting time ="<<avg_wt/n<<endl;
+	
+cout<<"-------Gannt Chart -------------\n";
+for(i=0;i<n;i++){
+	cout<<"[P"<<p[i]<<" ]";
+}
+cout<<"\n--------------------------------";
+
+
     return 0;
 }
 
